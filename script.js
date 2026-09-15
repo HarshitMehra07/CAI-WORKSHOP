@@ -1,0 +1,2 @@
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const orb=document.querySelector('.aria-orb');window.addEventListener('mousemove',e=>{if(!orb)return;const x=(e.clientX/window.innerWidth-.5)*10,y=(e.clientY/window.innerHeight-.5)*10;orb.style.transform=`translate(${x}px,${y}px)`});
